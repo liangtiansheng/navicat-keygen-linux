@@ -4,6 +4,8 @@
 
 1. 请确保你安装了下面几个库：
 
+   * `gcc g++`
+   * `openssl header`
    * `capstone`
    * `keystone`
    * `rapidjson`
@@ -11,6 +13,12 @@
    你可以通过下面的命令来安装它们：
 
    ```console
+   # install gcc g++
+   $ sudo apt-get install build-essential
+   
+   # install openssl header
+   $ sudo apt-get install libssl-dev
+   
    # install capstone
    $ sudo apt-get install libcapstone-dev
 
