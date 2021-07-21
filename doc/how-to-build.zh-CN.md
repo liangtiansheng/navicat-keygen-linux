@@ -36,12 +36,17 @@
    $ sudo apt-get install rapidjson-dev
    ```
 
-2. 你的gcc支持C++17特性。 
+2. 你的gcc要支持C++17特性。
+3. 通过 ubuntu18.04 测试，gcc7.4 官方自带的二进制软件包并不支持 c++17 特性，尽管从 gcc7.1 稳定版开始就支持 c++17。所以我是偷懒用了ubunt20.04的源安装了gcc9.3版本，支持 c++17。
+   ```bash
+   不支持 c++17，会抛出异常如下
+   ./navicat-patcher/Misc.cpp:6:10: fatal error: filesystem: No such file or directory
+   ```
 
 ## 2. 编译
 
 ```console
-$ git clone -b linux --single-branch https://github.com/DoubleLabyrinth/navicat-keygen.git
+$ git clone -b main --single-branch https://github.com/liangtiansheng/navicat-keygen.git
 $ cd navicat-keygen
 $ make all
 ```
